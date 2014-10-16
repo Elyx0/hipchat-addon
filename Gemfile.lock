@@ -1,0 +1,153 @@
+GIT
+  remote: https://github.com/intridea/grape.git
+  revision: 2099c3a050df454c9181b775657fec544b97fe1a
+  specs:
+    grape (0.7.1)
+      activesupport
+      builder
+      hashie (>= 2.1.0)
+      multi_json (>= 1.3.2)
+      multi_xml (>= 0.5.2)
+      rack (>= 1.3.0)
+      rack-accept
+      rack-mount
+      virtus (>= 1.0.0)
+
+GIT
+  remote: https://github.com/mongomapper/mongomapper.git
+  revision: 6caa720d38518593b284a15640d82e18d0088fd8
+  specs:
+    mongo_mapper (0.13.0)
+      activemodel (>= 3.0.0)
+      activesupport (>= 3.0)
+      mongo (~> 1.8)
+      plucky (~> 0.6.5)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    activemodel (4.1.2)
+      activesupport (= 4.1.2)
+      builder (~> 3.1)
+    activesupport (4.1.2)
+      i18n (~> 0.6, >= 0.6.9)
+      json (~> 1.7, >= 1.7.7)
+      minitest (~> 5.1)
+      thread_safe (~> 0.1)
+      tzinfo (~> 1.1)
+    axiom-types (0.1.1)
+      descendants_tracker (~> 0.0.4)
+      ice_nine (~> 0.11.0)
+      thread_safe (~> 0.3, >= 0.3.1)
+    bson (1.10.2)
+    bson_ext (1.10.2)
+      bson (~> 1.10.2)
+    builder (3.2.2)
+    celluloid (0.15.2)
+      timers (~> 1.1.0)
+    cleverbot-api (0.0.4)
+    coderay (1.1.0)
+    coercible (1.0.0)
+      descendants_tracker (~> 0.0.1)
+    descendants_tracker (0.0.4)
+      thread_safe (~> 0.3, >= 0.3.1)
+    equalizer (0.0.9)
+    faraday (0.9.0)
+      multipart-post (>= 1.2, < 3)
+    ffi (1.9.3)
+    haml (4.0.5)
+      tilt
+    hashie (3.1.0)
+    htmlentities (4.3.2)
+    http_logger (0.4.3)
+    i18n (0.6.9)
+    ice_nine (0.11.0)
+    json (1.8.1)
+    jwt (1.0.0)
+    libv8 (3.16.14.3)
+    listen (2.7.9)
+      celluloid (>= 0.15.2)
+      rb-fsevent (>= 0.9.3)
+      rb-inotify (>= 0.9)
+    method_source (0.8.2)
+    mime-types (2.3)
+    mini_portile (0.6.0)
+    minitest (5.3.5)
+    money (6.1.1)
+      i18n (~> 0.6.4)
+    mongo (1.10.2)
+      bson (= 1.10.2)
+    multi_json (1.10.1)
+    multi_xml (0.5.5)
+    multipart-post (2.0.0)
+    nokogiri (1.6.2.1)
+      mini_portile (= 0.6.0)
+    oauth2 (0.9.4)
+      faraday (>= 0.8, < 0.10)
+      jwt (~> 1.0)
+      multi_json (~> 1.3)
+      multi_xml (~> 0.5)
+      rack (~> 1.2)
+    plucky (0.6.6)
+      mongo (~> 1.5)
+    pry (0.10.0)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
+    rack (1.5.2)
+    rack-accept (0.4.5)
+      rack (>= 0.4)
+    rack-flash3 (1.0.5)
+      rack
+    rack-mount (0.8.3)
+      rack (>= 1.0.0)
+    rack-protection (1.5.3)
+      rack
+    rb-fsevent (0.9.4)
+    rb-inotify (0.9.5)
+      ffi (>= 0.5.0)
+    rerun (0.10.0)
+      listen (~> 2.7, >= 2.7.3)
+    rest-client (1.6.7)
+      mime-types (>= 1.16)
+    sinatra (1.4.5)
+      rack (~> 1.4)
+      rack-protection (~> 1.4)
+      tilt (~> 1.3, >= 1.3.4)
+    slop (3.5.0)
+    stripe (1.8.8)
+      multi_json (>= 1.0.4, < 2)
+      rest-client (~> 1.4)
+    thread_safe (0.3.4)
+    tilt (1.4.1)
+    timers (1.1.0)
+    tzinfo (1.2.1)
+      thread_safe (~> 0.1)
+    virtus (1.0.2)
+      axiom-types (~> 0.1)
+      coercible (~> 1.0)
+      descendants_tracker (~> 0.0.3)
+      equalizer (~> 0.0.9)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bson_ext
+  cleverbot-api
+  grape!
+  haml
+  htmlentities
+  http_logger
+  jwt
+  libv8
+  money
+  mongo_mapper!
+  nokogiri
+  oauth2
+  pry
+  rack-flash3
+  rerun
+  rest-client
+  sinatra
+  stripe
