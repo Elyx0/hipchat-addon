@@ -41,13 +41,13 @@ module DailyTestRoom
                 event: 'room_message',
                 name: 'quote'
               },
-              # {
-              #   #Disregard this hook, used in internal
-              #   url: "#{ENV['BASE_URI']}/hipchat/traffic",
-              #   pattern: "^!traffic (.*)$",
-              #   event: 'room_message',
-              #   name: 'traffic'
-              # },
+              {
+                #Disregard this hook, used in internal, feel free to comment it
+                url: "#{ENV['BASE_URI']}/hipchat/traffic",
+                pattern: "^!traffic (.*)$",
+                event: 'room_message',
+                name: 'traffic'
+              },
               {
                 url: "#{ENV['BASE_URI']}/hipchat/cleverbot",
                 pattern: "(h|H)ot(b|B)ot|robot|bot",

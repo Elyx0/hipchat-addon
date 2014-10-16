@@ -44,7 +44,7 @@ class Net::HTTPResponse
 end
 
 configure do
-    ENV['HIPCHAT_SCOPES'] = "send_message view_messages send_notification"
+    ENV['HIPCHAT_SCOPES'] = "send_notification"
     if ENV['RACK_ENV'] != 'production'
 
         #Development settings : ngrok tunnel url + mongodb db
