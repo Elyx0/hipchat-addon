@@ -147,7 +147,7 @@ module DailyTestRoom
       account_id = data['oauth_client_id']
       message[0] = '' #Removing the '#'
       gif = Giphy.new(message).get
-      Hipchat.new(account_id,room).send_msg(gif)
+      Hipchat.new(account_id,room).send_msg("<img src='#{gif}'/> (#<b>#{message}</b>)",'html')
   end
 
     post '/hipchat/quote' do
@@ -157,7 +157,7 @@ module DailyTestRoom
         account_id = data['oauth_client_id']
         if $waitingAnswer
         else
-            Hipchat.new(account_id,room).send_msg(Quote.new.get)
+            Hipchat.new(account_id,room).send_msg(Quote.new.get,'html')
             $waitingAnswer = true
             timeout1 = Thread.new(Time.now + 20) do |end_time|
               while Time.now < end_time
@@ -185,11 +185,13 @@ module DailyTestRoom
 
 
     post '/hipchat/greet' do
+      if request and request.body
         data = JSON.parse(request.body.read)
-        message = data['item']['message']['message']
+        message = data['item']['sender']['mention_name']
         room = data['item']['room']['id']
         account_id = data['oauth_client_id']
         #Build your custom greet for users here
+      end
     end
 
     post '/hipchat/answer' do

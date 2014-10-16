@@ -9,8 +9,8 @@ module DailyTestRoom
       desc 'Describes the add-on and what its capabilities are'
       get 'capabilities' do
         {
-          name: 'CleverBot HipChat Room Addon',
-          description: 'Discuss with CleverBot in your HipChat rooms by mentionning him',
+          name: 'HipChat Room Bot',
+          description: 'Hotbot generates gif, answers back to you and got quizz features, the perfect fun companion',
           key: "hipchat-bot-addon-#{ENV['RACK_ENV']}",
           links: {
             homepage: ENV['BASE_URI'],
@@ -39,14 +39,15 @@ module DailyTestRoom
                 url: "#{ENV['BASE_URI']}/hipchat/quote",
                 pattern: "!quote",
                 event: 'room_message',
-                name: 'quote preview'
+                name: 'quote'
               },
-              {
-                url: "#{ENV['BASE_URI']}/hipchat/traffic",
-                pattern: "^!traffic (.*)$",
-                event: 'room_message',
-                name: 'traffic'
-              },
+              # {
+              #   #Disregard this hook, used in internal
+              #   url: "#{ENV['BASE_URI']}/hipchat/traffic",
+              #   pattern: "^!traffic (.*)$",
+              #   event: 'room_message',
+              #   name: 'traffic'
+              # },
               {
                 url: "#{ENV['BASE_URI']}/hipchat/cleverbot",
                 pattern: "(h|H)ot(b|B)ot|robot|bot",
@@ -57,19 +58,20 @@ module DailyTestRoom
                 url: "#{ENV['BASE_URI']}/hipchat/answer",
                 pattern: "^=(.*)$",
                 event: 'room_message',
-                name: 'quote preview'
+                name: 'answer to quizz'
               },
               {
                 url: "#{ENV['BASE_URI']}/hipchat/gif",
                 pattern: "^#(.*)$",
                 event: 'room_message',
-                name: 'quote preview'
-              },
-              {
-                url: "#{ENV['BASE_URI']}/hipchat/greet",
-                event: 'room_enter',
-                name: 'room_enter'
+                name: 'gif'
               }
+              # ,
+              # {
+              #   url: "#{ENV['BASE_URI']}/hipchat/greet",
+              #   event: 'room_enter',
+              #   name: 'room_enter'
+              # }
             ] + hookList #Comment if you don't want auto-image meme
           }
         }

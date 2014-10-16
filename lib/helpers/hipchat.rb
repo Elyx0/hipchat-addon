@@ -14,10 +14,10 @@ module DailyTestRoom
                 refreshToken(@account)
             end
         end
-        def send_msg(msg,params={})
+        def send_msg(msg,format="text",color="yellow",notify=false)
             message = HTMLEntities.new.decode msg
             endpoint = "https://api.hipchat.com/v2/room/#{@room}/notification?auth_token=#{ @account.hipchat_oauth_token }"
-            jdata = JSON.generate({"message" => message,"message_format" => "text"})
+            jdata = JSON.generate({"message" => message,"message_format" => format,"color" => color,"notify" => notify})
             RestClient.post endpoint, jdata, {:content_type => :json}
         end
     end

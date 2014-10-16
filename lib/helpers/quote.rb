@@ -13,7 +13,7 @@ module DailyTestRoom
             answer = regex[1]
             date = regex[2]
             $answer = answer.downcase
-            "#{quote} - '#{date}'"
+            "<b>#{quote}</b> - '#{date}'    (To answer: <b>=</b>myAnswer)"
         end
     end
 end

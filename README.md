@@ -119,6 +119,6 @@ Answers should be made with ```=<yourAnswer>```
 
 * Answers to its name with CleverBot api ```Hi HotBot !```
 
-
+* #word outputs gif about tagged as word ```#cat```
 
 Feel free to contact me if anything is going wrong.
